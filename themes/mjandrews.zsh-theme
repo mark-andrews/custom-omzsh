@@ -5,6 +5,13 @@ GREEN=$fg[green]
 WHITE=$fg[white]
 BLUE=$fg[blue]
 CYAN=$fg[cyan]
+MAGENTA=$fg[magenta]
+COL1=$FG[068]
+COL2=$FG[058]
+COL3=$FG[008]
+COL4=$FG[147]
+COL5=$FG[178]
+COL6=$FG[158]
 RED_BOLD=$fg_bold[red]
 YELLOW_BOLD=$fg_bold[yellow]
 GREEN_BOLD=$fg_bold[green]
@@ -18,13 +25,13 @@ USER_="%n"
 
 HOST_="%m"
 
-PATH_="%~"
+PATH_="%{$COL5%}%~%{$reset_color%}"
 
 GIT_="\$(git_prompt_short_sha)\$(git_prompt_info)\$(git_prompt_status)"
 
 ARROW_='> '
 
-ZSH_THEME_GIT_PROMPT_PREFIX="|"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$WHITE%}|%{$COL4%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$RED%})%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg_bold[green]%}✔%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_bold[red]%}✗%{$reset_color%}"
@@ -40,9 +47,9 @@ ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} renamed%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} unmerged%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} untracked%{$reset_color%}"
 
-ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" :: %{$RED%}(%{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{$COL1%} :: %{$reset_color%}%{$RED%}(%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%}"
 
 
-PROMPT="$USER_ :: $HOST_ :: $PATH_$GIT_
+PROMPT="%{$COL2%}$USER_%{$reset_color%}%{$COL1%} :: %{$reset_color%}%{$COL3%}$HOST_%{$reset_color%}%{$COL1%} :: %{$reset_color%}$PATH_$GIT_
 $ARROW_"
