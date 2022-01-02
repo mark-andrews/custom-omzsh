@@ -20,12 +20,12 @@ HOST_="%m"
 
 PATH_="%~"
 
-GIT_="\$(git_prompt_short_sha)\$(git_prompt_info)\$(git_prompt_status)%{$RED%})%{$reset_color%}"
+GIT_="\$(git_prompt_short_sha)\$(git_prompt_info)\$(git_prompt_status)"
 
 ARROW_='> '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="|"
-ZSH_THEME_GIT_PROMPT_SUFFIX=""
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$RED%})%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg_bold[green]%}✔%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_bold[red]%}✗%{$reset_color%}"
 
