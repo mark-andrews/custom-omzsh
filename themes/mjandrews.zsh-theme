@@ -1,4 +1,3 @@
-# these colour commands are taken from https://gist.github.com/roperzh/11351606
 RED=$fg[red]
 YELLOW=$fg[yellow]
 GREEN=$fg[green]
@@ -12,6 +11,9 @@ COL3=$FG[008]
 COL4=$FG[147]
 COL5=$FG[178]
 COL6=$FG[158]
+COL7=$FG[047]
+COL8=$FG[078]
+COL9=$FG[088]
 RED_BOLD=$fg_bold[red]
 YELLOW_BOLD=$fg_bold[yellow]
 GREEN_BOLD=$fg_bold[green]
@@ -27,7 +29,7 @@ HOST_="%m"
 
 PATH_="%{$COL5%}%~%{$reset_color%}"
 
-GIT_="\$(git_prompt_short_sha)\$(git_prompt_info)\$(git_prompt_status)"
+GIT_="\$(git_prompt_short_sha)\$(git_prompt_info)\$(git_prompt_status) \$(git_commits_ahead)"
 
 ARROW_='> '
 
@@ -36,16 +38,19 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$RED%})%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg_bold[green]%}✔%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg_bold[red]%}✗%{$reset_color%}"
 
-ZSH_THEME_GIT_PROMPT_AHEAD="%{$CYAN%} +$(git_commits_ahead)%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_BEHIND="%{$RED%} -$(git_commits_behind)%{$reset_color%}"
+ZSH_THEME_GIT_COMMITS_AHEAD_PREFIX="%{$CYAN%}+"
+ZSH_THEME_GIT_COMMITS_AHEAD_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_COMMITS_BEHIND_PREFIX="%{$RED%}-"
+ZSH_THEME_GIT_COMMITS_BEHIND_SUFFIX="%{$reset_color%}"
+
 ZSH_THEME_GIT_PROMPT_DIVERGED="%{$RED%}↯%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} added%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg[blue]%} modified%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%{$COL7%} modified%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} deleted%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_RENAMED="%{$fg[magenta]%} renamed%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_RENAMED="%{$COL8%} renamed%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} unmerged%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} untracked%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$COL9%} untracked%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{$COL1%} :: %{$reset_color%}%{$RED%}(%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%}"
