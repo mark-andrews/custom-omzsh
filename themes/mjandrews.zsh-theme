@@ -49,7 +49,7 @@ ZSH_THEME_GIT_PROMPT_ADDED="%{$fg[green]%} added%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$COL7%} modified%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[red]%} deleted%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_RENAMED="%{$COL8%} renamed%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[yellow]%} unmerged%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%{$RED%} merge-conflict%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$COL9%} untracked%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{$COL1%} :: %{$reset_color%}%{$RED%}(%{$fg[yellow]%}"
